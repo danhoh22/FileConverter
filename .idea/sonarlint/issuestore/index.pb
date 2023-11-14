@@ -23,3 +23,7 @@ c
 3src/main/java/ru/vyatsu/service/ConversionType.java,c\1\c1c77ef503a9b65fc302d82239161636e5f8feef
 `
 0src/main/java/ru/vyatsu/service/MenuService.java,c\8\c8bed5672c78ad1366365a76344ca7956d753705
+Q
+!src/main/java/ru/vyatsu/Main.java,c\3\c397586a0adb75a53622ac1835ed0afe6bd51cfc
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
