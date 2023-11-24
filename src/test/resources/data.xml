@@ -1,5 +1,5 @@
-<CarshopXML>
-  <car id="1" carmake="ВАЗ">
+<CarShopXML>
+  <car id="1" carmaker="ВАЗ">
     <model>Гранта</model>
     <yearofproduction>2012</yearofproduction>
     <horsepower>92</horsepower>
@@ -11,7 +11,7 @@
       <heatedsteeringwheel>No</heatedsteeringwheel>
     </equipment>
   </car>
-  <car id="2" carmake="ВАЗ">
+  <car id="2" carmaker="ВАЗ">
     <model>Веста</model>
     <yearofproduction>2017</yearofproduction>
     <horsepower>118</horsepower>
@@ -23,7 +23,7 @@
       <heatedsteeringwheel>No</heatedsteeringwheel>
     </equipment>
   </car>
-  <car id="3" carmake="ВАЗ">
+  <car id="3" carmaker="ВАЗ">
     <model>Калина</model>
     <yearofproduction>2007</yearofproduction>
     <horsepower>80</horsepower>
@@ -35,7 +35,7 @@
       <heatedsteeringwheel>No</heatedsteeringwheel>
     </equipment>
   </car>
-  <car id="4" carmake="Mercedes">
+  <car id="4" carmaker="Mercedes">
     <model>GLC</model>
     <yearofproduction>2018</yearofproduction>
     <horsepower>160</horsepower>
@@ -47,7 +47,7 @@
       <heatedsteeringwheel>Yes</heatedsteeringwheel>
     </equipment>
   </car>
-  <car id="5" carmake="Mercedes">
+  <car id="5" carmaker="Mercedes">
     <model>C</model>
     <yearofproduction>2020</yearofproduction>
     <horsepower>220</horsepower>
@@ -59,7 +59,7 @@
       <heatedsteeringwheel>No</heatedsteeringwheel>
     </equipment>
   </car>
-  <car id="6" carmake="BMW">
+  <car id="6" carmaker="BMW">
     <model>X5</model>
     <yearofproduction>2017</yearofproduction>
     <horsepower>180</horsepower>
@@ -71,4 +71,4 @@
       <heatedsteeringwheel>No</heatedsteeringwheel>
     </equipment>
   </car>
-</CarshopXML>
+</CarShopXML>

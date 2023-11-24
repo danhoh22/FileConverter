@@ -1,6 +1,6 @@
 {
   "carshop" : [ {
-    "carmake" : {
+    "carmaker" : {
       "name" : "ВАЗ",
       "models" : [ {
         "model" : "Гранта",
@@ -38,7 +38,7 @@
       } ]
     }
   }, {
-    "carmake" : {
+    "carmaker": {
       "name" : "Mercedes",
       "models" : [ {
         "model" : "GLC",
@@ -65,7 +65,7 @@
       } ]
     }
   }, {
-    "carmake" : {
+    "carmaker": {
       "name" : "BMW",
       "models" : [ {
         "model" : "X5",
