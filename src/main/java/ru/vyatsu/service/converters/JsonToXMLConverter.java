@@ -1,9 +1,10 @@
 package ru.vyatsu.service.converters;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import lombok.val;
 import ru.vyatsu.service.Converter;
 import ru.vyatsu.service.structureJSON.CarShopJSON;
-import ru.vyatsu.service.structureXML.CarshopXML;
+import ru.vyatsu.service.structureXML.CarShopXML;
 
 import java.io.IOException;
 
@@ -11,13 +12,14 @@ public class JsonToXMLConverter extends Converter {
     @Override
     public void convert(String inputFile, String outputFile) throws IOException {
         // Логика конвертации JSON в XML
-        String jsonContent = readFile(inputFile);
-        String xmlContent = convertJSONtoXML(jsonContent);
+        val jsonContent = readFile(inputFile);
+        val xmlContent = convertJSONtoXML(jsonContent);
         writeFile(outputFile, xmlContent);
     }
-    public static String convertJSONtoXML(String jsonContent) throws JsonProcessingException {
-        CarShopJSON сarshopJSON = objectMapper.readValue(jsonContent, CarShopJSON.class);
-        CarshopXML carshopXML = (CarshopXML) JSONtoXMLTransformer.transform(сarshopJSON);
-        return xmlMapper.writerWithDefaultPrettyPrinter().writeValueAsString(carshopXML);
+
+    public String convertJSONtoXML(String jsonContent) throws JsonProcessingException {
+        CarShopJSON carShopJSON = objectMapper.readValue(jsonContent, CarShopJSON.class);
+        CarShopXML carShopXML = (CarShopXML) JSONtoXMLTransformer.transform(carShopJSON);
+        return xmlMapper.writerWithDefaultPrettyPrinter().writeValueAsString(carShopXML);
     }
 }

@@ -1,74 +1,74 @@
-<CarShopXML>
-  <car id="1" carmaker="ВАЗ">
-    <model>Гранта</model>
-    <yearofproduction>2012</yearofproduction>
-    <horsepower>92</horsepower>
-    <equipment>
-      <carmats>Yes</carmats>
-      <heatedseats>Yes</heatedseats>
-      <climatecontrol>Yes</climatecontrol>
-      <leatherinterior>No</leatherinterior>
-      <heatedsteeringwheel>No</heatedsteeringwheel>
-    </equipment>
-  </car>
-  <car id="2" carmaker="ВАЗ">
-    <model>Веста</model>
-    <yearofproduction>2017</yearofproduction>
-    <horsepower>118</horsepower>
-    <equipment>
-      <carmats>Yes</carmats>
-      <heatedseats>Yes</heatedseats>
-      <climatecontrol>No</climatecontrol>
-      <leatherinterior>No</leatherinterior>
-      <heatedsteeringwheel>No</heatedsteeringwheel>
-    </equipment>
-  </car>
-  <car id="3" carmaker="ВАЗ">
-    <model>Калина</model>
-    <yearofproduction>2007</yearofproduction>
-    <horsepower>80</horsepower>
-    <equipment>
-      <carmats>Yes</carmats>
-      <heatedseats>No</heatedseats>
-      <climatecontrol>No</climatecontrol>
-      <leatherinterior>No</leatherinterior>
-      <heatedsteeringwheel>No</heatedsteeringwheel>
-    </equipment>
-  </car>
-  <car id="4" carmaker="Mercedes">
-    <model>GLC</model>
-    <yearofproduction>2018</yearofproduction>
-    <horsepower>160</horsepower>
-    <equipment>
-      <carmats>Yes</carmats>
-      <heatedseats>Yes</heatedseats>
-      <climatecontrol>Yes</climatecontrol>
-      <leatherinterior>Yes</leatherinterior>
-      <heatedsteeringwheel>Yes</heatedsteeringwheel>
-    </equipment>
-  </car>
-  <car id="5" carmaker="Mercedes">
-    <model>C</model>
-    <yearofproduction>2020</yearofproduction>
-    <horsepower>220</horsepower>
-    <equipment>
-      <carmats>Yes</carmats>
-      <heatedseats>Yes</heatedseats>
-      <climatecontrol>No</climatecontrol>
-      <leatherinterior>No</leatherinterior>
-      <heatedsteeringwheel>No</heatedsteeringwheel>
-    </equipment>
-  </car>
-  <car id="6" carmaker="BMW">
-    <model>X5</model>
-    <yearofproduction>2017</yearofproduction>
-    <horsepower>180</horsepower>
-    <equipment>
-      <carmats>Yes</carmats>
-      <heatedseats>Yes</heatedseats>
-      <climatecontrol>Yes</climatecontrol>
-      <leatherinterior>No</leatherinterior>
-      <heatedsteeringwheel>No</heatedsteeringwheel>
-    </equipment>
-  </car>
-</CarShopXML>
+<carShopXML>
+    <car id="1" carMaker="ВАЗ">
+        <model>Гранта</model>
+        <yearOfProduction>2012</yearOfProduction>
+        <horsePower>92</horsePower>
+        <equipment>
+            <carMats>Yes</carMats>
+            <heatedSeats>Yes</heatedSeats>
+            <climateControl>Yes</climateControl>
+            <leatherInterior>No</leatherInterior>
+            <heatedSteeringWheel>No</heatedSteeringWheel>
+        </equipment>
+    </car>
+    <car id="2" carMaker="ВАЗ">
+        <model>Веста</model>
+        <yearOfProduction>2017</yearOfProduction>
+        <horsePower>118</horsePower>
+        <equipment>
+            <carMats>Yes</carMats>
+            <heatedSeats>Yes</heatedSeats>
+            <climateControl>No</climateControl>
+            <leatherInterior>No</leatherInterior>
+            <heatedSteeringWheel>No</heatedSteeringWheel>
+        </equipment>
+    </car>
+    <car id="3" carMaker="ВАЗ">
+        <model>Калина</model>
+        <yearOfProduction>2007</yearOfProduction>
+        <horsePower>80</horsePower>
+        <equipment>
+            <carMats>Yes</carMats>
+            <heatedSeats>No</heatedSeats>
+            <climateControl>No</climateControl>
+            <leatherInterior>No</leatherInterior>
+            <heatedSteeringWheel>No</heatedSteeringWheel>
+        </equipment>
+    </car>
+    <car id="4" carMaker="Mercedes">
+        <model>GLC</model>
+        <yearOfProduction>2018</yearOfProduction>
+        <horsePower>160</horsePower>
+        <equipment>
+            <carMats>Yes</carMats>
+            <heatedSeats>Yes</heatedSeats>
+            <climateControl>Yes</climateControl>
+            <leatherInterior>Yes</leatherInterior>
+            <heatedSteeringWheel>Yes</heatedSteeringWheel>
+        </equipment>
+    </car>
+    <car id="5" carMaker="Mercedes">
+        <model>C</model>
+        <yearOfProduction>2020</yearOfProduction>
+        <horsePower>220</horsePower>
+        <equipment>
+            <carMats>Yes</carMats>
+            <heatedSeats>Yes</heatedSeats>
+            <climateControl>No</climateControl>
+            <leatherInterior>No</leatherInterior>
+            <heatedSteeringWheel>No</heatedSteeringWheel>
+        </equipment>
+    </car>
+    <car id="6" carMaker="BMW">
+        <model>X5</model>
+        <yearOfProduction>2017</yearOfProduction>
+        <horsePower>180</horsePower>
+        <equipment>
+            <carMats>Yes</carMats>
+            <heatedSeats>Yes</heatedSeats>
+            <climateControl>Yes</climateControl>
+            <leatherInterior>No</leatherInterior>
+            <heatedSteeringWheel>No</heatedSteeringWheel>
+        </equipment>
+    </car>
+</carShopXML>

@@ -4,31 +4,32 @@ import ru.vyatsu.service.structureJSON.CarMakerJSON;
 import ru.vyatsu.service.structureJSON.CarShopJSON;
 import ru.vyatsu.service.structureJSON.ModelsJSON;
 import ru.vyatsu.service.structureXML.*;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Трансформер для преобразования данных из формата XML (в виде {@link CarshopXML}) в JSON (в виде списка {@link CarMakerJSON}).
+ * Трансформер для преобразования данных из формата XML (в виде {@link CarShopXML}) в JSON (в виде списка {@link CarMakerJSON}).
  */
 public class XMLtoJSONTransformer {
     private XMLtoJSONTransformer() {
         throw new IllegalStateException("Utility class");
     }
 
-    public static CarShopJSON transform(CarshopXML garageXML) {
+    public static CarShopJSON transform(CarShopXML garageXML) {
         Map<String, List<ModelsJSON>> carmakeMap = new LinkedHashMap<>();
 
         garageXML.getCars().forEach(carXML -> {
             ModelsJSON car = ModelsJSON.builder()
                     .model(carXML.getModel())
-                    .yearofproduction(carXML.getYearofproduction())
-                    .horsepower(carXML.getHorsepower())
+                    .yearOfProduction(carXML.getYearOfProduction())
+                    .horsePower(carXML.getHorsePower())
                     .equipment(carXML.getEquipment())
                     .build();
 
-            carmakeMap.computeIfAbsent(carXML.getCarmaker(), k -> new ArrayList<>()).add(car);
+            carmakeMap.computeIfAbsent(carXML.getCarMaker(), k -> new ArrayList<>()).add(car);
         });
 
         List<CarMakerJSON> brandsList = carmakeMap.entrySet().stream()
@@ -38,8 +39,8 @@ public class XMLtoJSONTransformer {
                         .build())
                 .toList();
 
-        CarShopJSON carshopJSON = new CarShopJSON();
-        carshopJSON.setCarMake(brandsList);
-        return carshopJSON;
+        CarShopJSON carShopJSON = new CarShopJSON();
+        carShopJSON.setCarMake(brandsList);
+        return carShopJSON;
     }
 }

@@ -2,39 +2,35 @@ package ru.vyatsu.service.converters;
 
 import ru.vyatsu.service.structureJSON.CarShopJSON;
 import ru.vyatsu.service.structureXML.CarXML;
-import ru.vyatsu.service.structureXML.CarshopXML;
+import ru.vyatsu.service.structureXML.CarShopXML;
+
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Трансформер для преобразования данных из формата JSON (в виде {@link CarShopJSON}) в XML (в виде {@link CarshopXML}).
+ * Трансформер для преобразования данных из формата JSON (в виде {@link CarShopJSON}) в XML (в виде {@link CarShopXML}).
  */
 public class JSONtoXMLTransformer {
     private static final AtomicInteger uniqueIdGenerator = new AtomicInteger(1);
-    private JSONtoXMLTransformer() {
-        throw new IllegalStateException("Трансформер для преобразования данных из формата JSON");
-    }
-    public static CarshopXML transform(CarShopJSON carshopJSON) {
-        var carshopXML = new CarshopXML();
-        List<CarXML> carXMLList = carshopJSON.getCarMake().stream()
-                .flatMap(carmake -> carmake.getModels().stream()
-                        .map(car -> {
-                            // Уникальный идентификатор для каждого автомобиля
-                            int carId = generateUniqueId();
 
-                            return CarXML.builder()
-                                    .id(carId)
-                                    .carmaker(carmake.getName())
-                                    .model(car.getModel())
-                                    .yearofproduction(car.getYearofproduction())
-                                    .horsepower(car.getHorsepower())
-                                    .equipment(car.getEquipment())
-                                    .build();
-                        })
+    public static CarShopXML transform(CarShopJSON carShopJSON) {
+        var carShopXML = new CarShopXML();
+        List<CarXML> carXMLList = carShopJSON.getCarMake().stream()
+                .flatMap(carMake -> carMake.getModels().stream()
+                        .map(car -> CarXML.builder()
+                                .id(generateUniqueId())
+                                .carMaker(carMake.getName())
+                                .model(car.getModel())
+                                .yearOfProduction(car.getYearOfProduction())
+                                .horsePower(car.getHorsePower())
+                                .equipment(car.getEquipment())
+                                .build()
+                        )
                 ).toList();
-        carshopXML.setCars(carXMLList);
-        return carshopXML;
+        carShopXML.setCars(carXMLList);
+        return carShopXML;
     }
+
     // Метод для генерации уникального идентификатора
     private static int generateUniqueId() {
         return uniqueIdGenerator.getAndIncrement();

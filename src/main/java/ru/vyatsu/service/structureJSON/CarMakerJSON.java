@@ -10,7 +10,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-@JsonTypeName("carmaker")
+@JsonTypeName("carMaker")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
