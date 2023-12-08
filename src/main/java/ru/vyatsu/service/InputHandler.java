@@ -1,7 +1,11 @@
 package ru.vyatsu.service;
 
-import java.util.Scanner;
+import ch.qos.logback.classic.Logger;
+import ru.vyatsu.service.converters.JsonToXMLConverter;
+import ru.vyatsu.service.converters.XMLToJsonConverter;
 
+import java.io.IOException;
+import java.util.Scanner;
 public class InputHandler {
 
     public static String getInputFilePath(String[] args) {
@@ -22,5 +26,15 @@ public class InputHandler {
             System.out.print("Введите путь к выходному файлу: ");
             return scanner.nextLine();
         }
+    }
+
+    public static void convert(String inputFile, String outputFile) throws IOException {
+            Converter converter = null;
+            if (Converter.isXMLtoJSON(inputFile, outputFile)) {
+                converter = new XMLToJsonConverter();
+            } else if (Converter.isJSONtoXML(inputFile, outputFile)) {
+                converter = new JsonToXMLConverter();
+            }
+            converter.convert(inputFile, outputFile);
     }
 }

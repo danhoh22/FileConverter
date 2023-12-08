@@ -1,8 +1,8 @@
-package ru.vyatsu.service.structureJSON;
+package ru.vyatsu.service.structure.JSON;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
-import ru.vyatsu.service.structureXML.EquipmentXML;
+import ru.vyatsu.service.structure.XML.EquipmentXML;
 
 /**
  * Представляет автомобиль с его характеристиками в формате JSON.

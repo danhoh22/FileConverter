@@ -3,8 +3,8 @@ package ru.vyatsu.service.converters;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.val;
 import ru.vyatsu.service.Converter;
-import ru.vyatsu.service.structureJSON.CarShopJSON;
-import ru.vyatsu.service.structureXML.CarShopXML;
+import ru.vyatsu.service.structure.JSON.CarShopJSON;
+import ru.vyatsu.service.structure.XML.CarShopXML;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class JsonToXMLConverter extends Converter {
 
     public String convertJSONtoXML(String jsonContent) throws JsonProcessingException {
         CarShopJSON carShopJSON = objectMapper.readValue(jsonContent, CarShopJSON.class);
-        CarShopXML carShopXML = (CarShopXML) JSONtoXMLTransformer.transform(carShopJSON);
+        CarShopXML carShopXML = (CarShopXML) new JSONtoXMLTransformer().transform(carShopJSON);
         return xmlMapper.writerWithDefaultPrettyPrinter().writeValueAsString(carShopXML);
     }
 }

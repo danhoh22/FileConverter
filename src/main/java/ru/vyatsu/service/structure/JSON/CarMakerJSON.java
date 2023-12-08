@@ -1,4 +1,4 @@
-package ru.vyatsu.service.structureJSON;
+package ru.vyatsu.service.structure.JSON;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.*;

@@ -1,7 +1,9 @@
-package ru.vyatsu.service.structureXML;
+package ru.vyatsu.service.structure.XML;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.*;
+
+import java.util.UUID;
 
 /**
  * Представляет автомобиль с его характеристиками в формате XML.
@@ -13,7 +15,7 @@ import lombok.*;
 @Builder
 public class CarXML {
     @JacksonXmlProperty(isAttribute = true)
-    private int id; // Идентификатор
+    private UUID id; // Идентификатор
     @JacksonXmlProperty(isAttribute = true)
     private String carMaker; // Марка автомобиля
     private String model; // Название автомобиля

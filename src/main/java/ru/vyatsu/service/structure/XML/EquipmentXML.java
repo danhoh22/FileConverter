@@ -1,4 +1,4 @@
-package ru.vyatsu.service.structureXML;
+package ru.vyatsu.service.structure.XML;
 
 /**
  * Представляет комплектацию автомобиля.
