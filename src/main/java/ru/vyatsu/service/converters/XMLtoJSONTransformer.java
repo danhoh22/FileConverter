@@ -36,7 +36,7 @@ public class XMLtoJSONTransformer {
                 .toList();
 
         CarShopJSON carShopJSON = new CarShopJSON();
-        carShopJSON.setCarMake(brandsList);
+        carShopJSON.setCarMaker(brandsList);
         return carShopJSON;
     }
 }

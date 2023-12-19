@@ -11,11 +11,9 @@ import java.io.IOException;
 public class XMLToJsonConverter extends Converter {
     @Override
     public void convert(String inputFile, String outputFile) throws IOException {
-        // Логика конвертации XML в JSON
-        val xmlContent = readFile(inputFile);
-        val jsonContent = convertXMLtoJSON(xmlContent);
-        writeFile(outputFile, jsonContent);
+        writeFile(outputFile, convertXMLtoJSON(readFile(inputFile)));
     }
+
 
     public String convertXMLtoJSON(String xmlContent) throws JsonProcessingException {
         CarShopXML carShopXML = xmlMapper.readValue(xmlContent, CarShopXML.class);

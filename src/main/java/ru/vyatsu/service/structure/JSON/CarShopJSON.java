@@ -16,5 +16,5 @@ import java.util.List;
 public class CarShopJSON {
     @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.WRAPPER_OBJECT)
     @JsonProperty("carShop")
-    private List<CarMakerJSON> carMake; // Список произовдителей
+    private List<CarMakerJSON> carMaker; // Список произовдителей
 }

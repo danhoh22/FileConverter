@@ -13,9 +13,8 @@ import ru.vyatsu.service.InputHandler;
 public class Main {
     public static void main(String[] args) {
         try {
-            val inputFile = InputHandler.getInputFilePath(args);
-            val outputFile = InputHandler.getOutputFilePath(args);
-            InputHandler.convert(inputFile, outputFile);
+            InputHandler.convert(InputHandler.getInputFilePath(args),
+                    InputHandler.getOutputFilePath(args));
         } catch (Exception exception) {
             log.error("Ошибка: Произошла ошибка: {}", exception.getMessage());
         }
